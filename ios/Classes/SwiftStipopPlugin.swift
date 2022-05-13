@@ -16,8 +16,8 @@ public class SwiftStipopPlugin: NSObject, FlutterPlugin {
     
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         
-        let viewController: UIViewController =
-                    (UIApplication.shared.delegate?.window??.rootViewController)!
+        let viewController: UIViewController = UIApplication.shared.windows.last?.rootViewController
+                    //(UIApplication.shared.delegate?.window??.rootViewController)!
 
         switch call.method {
         case "showKeyboard":
